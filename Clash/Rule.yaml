@@ -1,5 +1,3 @@
-- RULE-SET, Anti IP, DIRECT
-
 - RULE-SET, Reject, AdBlock
 - RULE-SET, Special, DIRECT
 
@@ -67,6 +65,9 @@
 
 - RULE-SET, miHoYo, miHoYo
 
+- RULE-SET, Anti IP, Anti IP
+
+
 - RULE-SET, PROXY, Proxy
 
 - RULE-SET, Domestic, Domestic
@@ -80,7 +81,6 @@ script:
   code: |
     def main(ctx, metadata):
         ruleset_action = {
-            'Anti IP': 'DIRECT',
             'Reject': 'AdBlock',
             'Special': 'DIRECT',
             'Netflix': 'Netflix',
@@ -137,6 +137,7 @@ script:
             'Speedtest': 'Speedtest',
             'Steam': 'Steam',
             'miHoYo': 'miHoYo',
+            'Anti IP': 'Anti IP',
             'PROXY': 'Proxy',
             'Domestic': 'Domestic',
             'Domestic IPs': 'Domestic',
